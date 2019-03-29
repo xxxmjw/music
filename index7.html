@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>²ËÄñ½Ì³Ì(runoob.com)</title>
+	<link rel="stylesheet" href="DPlayer.min.css">
+
+	<style>
+		#dplayer {
+			max-width: 960px;
+			height: 620px;
+			margin: 0 auto;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="dplayer"></div>
+	
+<script src="pearplayer.js"></script>
+<script src="DPlayer.min.js"></script>
+
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.js"></script>
+	<script>
+var dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+	
+        url: 'https://naifei-1257509064.cos.ap-guangzhou.myqcloud.com/sgjqr.mp4?q-sign-algorithm=sha1&q-ak=AKIDSlv7LUcnESXqvA45l9Pa84oOoMivlj8S&q-sign-time=1553880650;1554053450&q-key-time=1553880650;1554053450&q-header-list=&q-url-param-list=&q-signature=88e6496267c044734f30260f0ed14fcb458a3001',
+        type: 'pearplayer',
+        customType: {
+            'pearplayer': function (video, player) {
+                new PearPlayer(video, {
+                    src: video.src,
+                    autoplay: player.options.autoplay
+                });
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
