@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>thxForWatching</title>
+	<link rel="stylesheet" href="DPlayer.min.css">
+
+	<style>
+		#dplayer {
+			max-width: 960px;
+			height: 620px;
+			margin: 0 auto;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="dplayer"></div>
+	
+<script src="pearplayer.js"></script>
+<script src="DPlayer.min.js"></script>
+
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.js"></script>
+	<script>
+var dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+	
+        url: 'http://ppdsbbg2s.bkt.clouddn.com/job_%5B%E7%AC%AC%201%20%E5%AD%A3.Ep18%5D%20%E7%88%B1%E3%80%81%E6%AD%BB%E4%BA%A1%20&%20%E6%9C%BA%E5%99%A8%E4%BA%BA%20-%20%E7%A7%98%E5%AF%86%E6%88%98%E4%BA%89.mp4',
+        type: 'pearplayer',
+        customType: {
+            'pearplayer': function (video, player) {
+                new PearPlayer(video, {
+                    src: video.src,
+                    autoplay: player.options.autoplay
+                });
+            }
+        }
+    }
+});
+</script>
+</body>
+</html>
